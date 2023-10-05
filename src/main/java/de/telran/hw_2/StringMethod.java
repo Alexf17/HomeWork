@@ -9,6 +9,8 @@ public class StringMethod {
         char symbol = myString.charAt(myString.length() - 2);
         System.out.println("Предпоследний символ в предложении 'I study Basic Java!' это символ -> " + symbol);
 
+
+
         //2
         if (myString.contains("Java")) {
             System.out.println("Слово Java есть в предложении");
