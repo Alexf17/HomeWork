@@ -14,7 +14,7 @@ public class ConvertNumbers {
 
         System.out.println("Число " + one + " в 16-ричной системе равняется " + Integer.parseInt(one, 16) + " в 10-ричной системе");
         System.out.println("Число " + two + " в 10-ричной системе равняется " + Integer.toHexString(two) + " в 16-ричной системе");
-        System.out.println("Число " + three + " в 2-ричной системе равняется " + Integer.parseInt(three, 2) + " в 10-ричной системе");
-        System.out.println("Число " + four + " в 10-ричной системе равняется " + Integer.toBinaryString(four) + " в 2-ричной системе");
+        System.out.println("Число " + three + " в 2-ичной системе равняется " + Integer.parseInt(three, 2) + " в 10-ричной системе");
+        System.out.println("Число " + four + " в 10-ричной системе равняется " + Integer.toBinaryString(four) + " в 2-ичной системе");
     }
 }

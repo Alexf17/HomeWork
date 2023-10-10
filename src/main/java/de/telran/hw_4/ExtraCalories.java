@@ -7,17 +7,18 @@ public class ExtraCalories {
         Чтобы решить эту проблему, предположим, что каждый квадратный сантиметр
         пиццы содержит 40 калорий.*/
 
-        int firstPizza = 24;
-        int secondPizza = 28;
+        int firstPizzaDiameter = 24;
+        int secondPizzaDiameter = 28;
         int caloriesPerCm=40;
 
 
         /*S = π × r2*/
-        double firstPizzaSquare = Math.PI * Math.pow(firstPizza / 2, 2);
-        double secondPizzaSquare = Math.PI * Math.pow(secondPizza / 2, 2);
+        double firstPizzaSquare = Math.PI * Math.pow(firstPizzaDiameter / 2, 2);
+        double secondPizzaSquare = Math.PI * Math.pow(secondPizzaDiameter / 2, 2);
 
         double difference = secondPizzaSquare-firstPizzaSquare;
         double extraCalories = difference*caloriesPerCm;
+
         System.out.println("Количество лишних калорий: " + extraCalories);
 
 
