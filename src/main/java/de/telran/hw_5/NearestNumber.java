@@ -29,8 +29,8 @@ public class NearestNumber {
     }
 
     public static double getNearestNumber(double m, double n) {
-        double result =10-m;
-        double result2 =10-n;
+        double result =Math.abs(m-10);
+        double result2 =Math.abs(n-10);
 
         if (result > result2) {
             return n;
