@@ -7,7 +7,7 @@ import static java.lang.System.exit;
 public class NearestNumber {
     public static void main(String[] args) {
 
-        /**   №1
+        /*
          Создать программу, выводящую на экран ближайшее к 10 из двух чисел, записанных в переменные m и n.
          Числа могут быть, как целочисленные, так и дробные.
 

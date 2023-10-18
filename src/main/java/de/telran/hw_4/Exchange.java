@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Exchange {
     public static void main(String[] args) {
-        /*Программа запрашивает у пользователя сумму в Евро для конвертации
+        /*Программа запрашивает у пользователя сумму в Евро для конвертации.
         Реализовать метод, который конвертирует полученную сумму в сумму в долларах США*/
 
         Scanner scanner = new Scanner(System.in);

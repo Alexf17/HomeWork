@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class LeapOrNo {
     public static void main(String[] args) {
-       /** Реализуйте программу, которая попросит пользователя ввести год и напечатать этот год.
+       /* Реализуйте программу, которая попросит пользователя ввести год и напечатать этот год.
         Метод isLeap проверяет високосный год или нет.*/
 
         Scanner scanner = new Scanner(System.in);
