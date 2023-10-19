@@ -1,5 +1,6 @@
 package de.telran.hw_8;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class RandomArray {
@@ -14,16 +15,17 @@ public class RandomArray {
         boolean strict = true;
 
         int[] ar = new int[5];
-        System.out.println("");
+
         for (int i = 0; i < ar.length; i++) {
             ar[i] = random.nextInt(90) + 10;
-            System.out.print(ar[i] + " ");
             if (number > ar[i]) {
                 strict = false;
             }
             number = ar[i];
 
         }
+        System.out.println("");
+        System.out.println(Arrays.toString(ar));
         System.out.println("\nМассив является строго возрастающей последовательностью? - " + strict);
     }
 }

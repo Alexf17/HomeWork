@@ -1,5 +1,6 @@
 package de.telran.hw_8;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class CreateArray {
@@ -14,15 +15,14 @@ public class CreateArray {
         Random random = new Random();
         for (int i = 0; i < ar.length; i++) {
             ar[i] = random.nextInt(51);
-            System.out.print(ar[i] + " ");
         }
-        System.out.println("");
+        System.out.println(Arrays.toString(ar));
         for (int i = 0; i < ar.length; i++) {
             if (i % 2 != 0) {
                 ar[i] = 0;
             }
-            System.out.print(ar[i] + " ");
         }
+        System.out.println(Arrays.toString(ar));
 
     }
 }
