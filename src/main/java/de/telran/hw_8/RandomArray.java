@@ -24,7 +24,6 @@ public class RandomArray {
             number = ar[i];
 
         }
-        System.out.println("");
         System.out.println(Arrays.toString(ar));
         System.out.println("\nМассив является строго возрастающей последовательностью? - " + strict);
     }
