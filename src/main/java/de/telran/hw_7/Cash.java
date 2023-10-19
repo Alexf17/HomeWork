@@ -19,20 +19,23 @@ public class Cash {
 
         int N = 21;
 
-        System.out.println("\nYou need "+getDays(N)+" days");
+        System.out.println("\nYou need " + getDays(N) + " days");
     }
-    public static int getDays (int N){
-        int maxSum=0;
-        int count=1;
-        while (N>1){
-        for (int i = N-1; i <=N; i--) {
-            if (N%i == 0) {
-                maxSum = i;
-                break;
+
+    public static int getDays(int N) {
+        int maxSum = 0;
+      /* Так как при остатке 1 мы не будем вычислять для неё делитель, а позволяем её снять,
+        мы заранее эту последнюю операцию добавляем в счетчик */
+        int count = 1;
+        while (N > 1) {
+            for (int i = N - 1; i < N; i--) {
+                if (N % i == 0) {
+                    maxSum = i;
+                    break;
+                }
             }
-        }
-        N-=maxSum;
-        count++;
+            N -= maxSum;
+            count++;
         }
         return count;
     }
