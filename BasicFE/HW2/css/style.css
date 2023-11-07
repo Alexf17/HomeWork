@@ -1,0 +1,17 @@
+.box {
+  width: 300px;
+  color: rgb(205, 26, 26);
+  display: inline-block;
+  background-color: rgb(214, 127, 127);
+}
+.text {
+  text-decoration: underline;
+}
+.wrapper {
+  width: 300px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  border: 1px dotted gray;
+}
