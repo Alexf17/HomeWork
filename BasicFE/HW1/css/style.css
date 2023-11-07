@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 10px 0;
+  padding: 10px 21px;
+  height: 60px;
+  background-color: #34495e;
+  border-radius: 20px;
+}
+.wrapper {
+  margin: 10px;
+  padding: 15px;
+  background-color: rgb(223, 225, 225);
+}
