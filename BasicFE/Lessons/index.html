@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="shortcut icon"
+      href="./icons8-zuhause-48.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <!-- <table>
+      <tr>
+        <th rowspan="2">Heading</th>
+        <th>Students</th>
+        <th colspan="3">Details</th>
+      </tr>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Roll Number</th>
+      </tr>
+      <tr>
+        <td rowspan="4">Student List</td>
+        <td>1</td>
+        <td>Victor</td>
+        <td>CS</td>
+        <td>123</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Will</td>
+        <td>Electronic</td>
+        <td>423</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Harry</td>
+        <td>Electrical</td>
+        <td>645</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Rich</td>
+        <td>Civil</td>
+        <td>432432</td>
+      </tr>
+    </table> -->
+    <section>
+      <div class="header">
+        <h1 class="title">Tour booking Form</h1>
+      </div>
+      <form action="#">
+        <div class="user_data">
+          <p>Name</p>
+          <input type="text" placeholder="First name" />
+          <input type="text" placeholder="Second name" />
+          <p>Email</p>
+          <input type="email" placeholder="name@gmail.com" />
+          <p>Phone</p>
+          <input type="tel" placeholder="###-###-##" />
+        </div>
+
+        <div class="visit_info">
+          <p>When are you planning to visit?</p>
+          <input type="date" />
+          <p>How many people are in your group?</p>
+          <input type="number" />
+          <p>Which tour are you most interested in?</p>
+          <select name="country" id="">
+            <option selected disabled>*Please select*</option>
+            <option value="usa">USA</option>
+            <option value="ua">UA</option>
+            <option value="uk">UK</option>
+          </select>
+        </div>
+
+        <div class="check_div">
+          <p>What is the best way to contact you?</p>
+          <div>
+            <input type="checkbox" id="phone" />
+            <label for="phone">Phone</label>
+          </div>
+          <div>
+            <input type="checkbox" id="email" />
+            <label for="email">Email</label>
+          </div>
+          <div>
+            <input type="checkbox" id="either" />
+            <label for="either">Either</label>
+          </div>
+          <p>If phone, when is the best time of day for a call-back?</p>
+          <div>
+            <input type="radio" id="time1" name="time" />
+            <label for="time">8-11 AM</label>
+          </div>
+          <div>
+            <input type="radio" id="time2" name="time" />
+            <label for="time2">12-4 PM</label>
+          </div>
+          <div>
+            <input type="radio" id="time3" name="time" />
+            <label for="time3">6-10 PM</label>
+          </div>
+
+          <p>Anything else we should know?</p>
+          <textarea name="" id=""></textarea>
+        </div>
+        <div class="button_box"><button type="submit">Send</button></div>
+      </form>
+    </section>
+  </body>
+</html>
