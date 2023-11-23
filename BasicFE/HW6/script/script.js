@@ -6,7 +6,7 @@ function ex1() {
     result *= d;
   }
 }
-// ex1();
+ex1();
 
 function ex2() {
   let num1 = +prompt("Please enter a first number");
