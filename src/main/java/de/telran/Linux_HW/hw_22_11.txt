@@ -1,0 +1,5 @@
+   0 mkdir -p /tmp/logs && cat /root/readme.txt >> /tmp/logs/test.log
+   1 ls / >> /tmp/logs/test2.log
+   2 cp /root/bench.py /tmp/logs
+   3 tar czvf /var/archive2.tar.gz /tmp/logs/*
+   4 history > hw22.11
