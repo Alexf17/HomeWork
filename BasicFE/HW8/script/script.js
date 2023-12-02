@@ -25,9 +25,10 @@ function createElementInto() {
 function deleteElement() {
   let existingElement = document.querySelector("#existingElement");
   let block = document.createElement("div");
-  block.setAttribute("class", "removeMe");
+  block.classList.block.setAttribute("class", "removeMe");
   existingElement.append(block);
-  block.remove();
+  let deleteElement = document.querySelector(".removeMe");
+  deleteElement.remove();
 }
 
 // deleteElement();

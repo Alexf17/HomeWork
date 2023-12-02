@@ -237,8 +237,108 @@
 // button.addEventListener("mouseover", function () {
 //   button.style.backgroundColor = "red";
 
-//   button.addEventListener("", function () {
-//       button.style.backgroundColor = "green";
-//       button.classList.
+//   button.addEventListener("mouseout", function () {
+//     button.style.backgroundColor = "green";
 //   });
 // });
+
+let images = [
+  "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+  "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg",
+  "https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630",
+  "https://img.freepik.com/free-photo/digital-painting-mountain-with-colorful-tree-foreground_1340-25699.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1700265600&semt=ais",
+  "https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=",
+  "https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?size=626&ext=jpg&ga=GA1.1.1803636316.1701302400&semt=sph",
+  "https://images.pexels.com/photos/1266810/pexels-photo-1266810.jpeg?cs=srgb&dl=pexels-simon-berger-1266810.jpg&fm=jpg",
+  "https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297_640.jpg",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCZlf5lc5tX-0gY-y94pGS0mQdL-D0lCH2OQ&usqp=CAU",
+  "https://media.istockphoto.com/id/1093110112/photo/picturesque-morning-in-plitvice-national-park-colorful-spring-scene-of-green-forest-with-pure.jpg?s=612x612&w=0&k=20&c=lpQ1sQI49bYbTp9WQ_EfVltAqSP1DXg0Ia7APTjjxz4=",
+  "https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_640.jpg",
+  "https://images.unsplash.com/photo-1509043759401-136742328bb3?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D",
+];
+let active_image_index = -1;
+
+function createThumbnailsContainer() {
+  let thumbnailsContainer = document.createElement("div");
+  thumbnailsContainer.className = "images_thumbnails";
+  document.body.append(thumbnailsContainer);
+  return thumbnailsContainer;
+}
+
+function createImgThumbnail(link) {
+  let block = document.createElement("div");
+  block.className = "img_wrapper";
+  let img = document.createElement("img");
+  img.setAttribute("src", link);
+  img.setAttribute("alt", "thumbnail");
+  block.append(img);
+  return block;
+}
+
+function initializeThumbnails(srcArr, thumbnailsContainer) {
+  for (let i = 0; i < srcArr.length; i++) {
+    let element = createImgThumbnail(srcArr[i]);
+    element.addEventListener("click", () => {
+      setActiveImage(srcArr[i]);
+      active_image_index = i;
+    });
+    thumbnailsContainer.append(element);
+  }
+}
+
+function setActiveImage(src) {
+  let block = document.createElement("div");
+  block.classList.add("active_images");
+  let img = document.createElement("img");
+  img.src = src;
+  img.alt = "active_image";
+  block.appendChild(img);
+  document.body.appendChild(block);
+}
+
+function unsetActiveImage() {
+  const activeBlock = document.querySelector(".active_images");
+  if (activeBlock) {
+    activeBlock.remove();
+  }
+}
+
+function nextImage() {
+  if (active_image_index < 0) {
+    return;
+  }
+
+  active_image_index = active_image_index + 1;
+  if (active_image_index >= images.length) {
+    active_image_index = 0;
+  }
+  setActiveImage(images[active_image_index]);
+}
+
+function prevImage() {
+  if (active_image_index < 0) {
+    return;
+  }
+
+  active_image_index = active_image_index - 1;
+  if (active_image_index < 0) {
+    active_image_index = images.length - 1;
+  }
+  setActiveImage(images[active_image_index]);
+}
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    active_image_index = -1;
+    unsetActiveImage();
+  }
+  if (event.key === "ArrowLeft") {
+    prevImage();
+  }
+  if (event.key === "ArrowRight") {
+    nextImage();
+  }
+});
+
+let thumbnailsContainer = createThumbnailsContainer();
+initializeThumbnails(images, thumbnailsContainer);
