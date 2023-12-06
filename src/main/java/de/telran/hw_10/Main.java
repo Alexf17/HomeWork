@@ -1,7 +1,6 @@
 package de.telran.hw_10;
 
 import java.util.Arrays;
-import java.util.concurrent.ThreadLocalRandom;
 
 import static de.telran.hw_10.Utils.getArrays;
 import static de.telran.hw_10.Utils.getTwoNumbers;
