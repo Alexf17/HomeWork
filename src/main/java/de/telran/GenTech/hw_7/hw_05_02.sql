@@ -12,3 +12,6 @@ values ("John", "Smith", "smith@example.com", "USA"),
        ("Michael", "Williams", "michael.williams@example.com", "UK"),
        ("Sofia", "Brown", "sophia.brown@example.com", "UK"),
        ("James", "Jones", "james.jones@example.com", "DE");
+
+
+https://dbdiagram.io/d/social-65c3ac87ac844320aeab0fff
