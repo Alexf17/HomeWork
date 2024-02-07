@@ -13,7 +13,7 @@ GROUP BY Customers.Country
 HAVING orders_count >=3;
 
 -- Вывести ТОП-10 самых продаваемых товаров (проекция: название_товара, ко_во_проданных_единиц)
-SELECT Products.ProductName, Quantity
+SELECT Products.ProductName, sum(Quantity) as Quantity
 FROM OrderDetails
 JOIN Products ON Products.ProductID = OrderDetails.ProductID
 GROUP BY OrderDetails.ProductId
